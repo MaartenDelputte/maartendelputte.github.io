@@ -1,0 +1,22 @@
+/* General styles */
+:root {
+  font-size: 16px;
+  @include mrt-breakpoint(desktop-large) {
+    font-size: 18px;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $mrt-color-light;
+  color: $mrt-color-dark;
+  font-size: mrt-px-to-rem(16px);
+  line-height: mrt-px-to-rem(16px*$mrt-line-height-default);
+  font-family: $mrt-font-family-primary;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+}

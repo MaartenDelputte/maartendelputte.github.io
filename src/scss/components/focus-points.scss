@@ -1,0 +1,22 @@
+.mrt-focus-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mrt-focus-points__item {
+  width: calc( 100% / 2.2);
+  padding-top: mrt-px-to-rem(40px);
+  @include mrt-breakpoint(mobile-large) {
+    width: calc( 100% / 3.2);
+    padding-top: mrt-px-to-rem(50px);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    width: calc( 100% / 3);
+    padding-top: mrt-px-to-rem(60px);
+  }
+  @include mrt-breakpoint(desktop-large) {
+    width: calc( 100% / 3.6);
+    padding-top: mrt-px-to-rem(76px);
+  }
+}

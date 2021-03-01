@@ -1,0 +1,88 @@
+.mrt-album {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.mrt-album__part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mrt-album__visual {
+  z-index: 2;
+}
+
+.mrt-album__visual img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.mrt-album__highlight {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s background ease;
+}
+
+.mrt-album__highlight::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translate(0,-55%);
+  background-image: radial-gradient(circle,rgba($mrt-color-light,0.65),rgba($mrt-color-dark,0) 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mrt-album__highlight__icon {
+  width: 24%;
+  height: 24%;
+  opacity: 0;
+  transition: 0.6s opacity ease;
+}
+
+.mrt-album:hover .mrt-album__highlight__icon {
+  opacity: 1;
+}
+
+.mrt-album__highlight__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: $mrt-color-light;
+}
+
+.mrt-album:hover .mrt-album__highlight {
+  background:rgba($mrt-color-spotify,0.75);
+}
+
+.mrt-album__record {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 96%;
+  height: 96%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 1s transform;
+  overflow: inherit;
+  will-change: transform;
+  @media (pointer: coarse) {
+    display: none;
+  }
+}
+
+.mrt-album:hover .mrt-album__record {
+  transform: translate(-22%,-50%);
+}

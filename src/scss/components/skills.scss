@@ -1,0 +1,93 @@
+.mrt-skills {
+  @include mrt-breakpoint('desktop-medium') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.mrt-skills__item {
+  @include mrt-breakpoint(mobile-large) {
+    width: 50%;
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    width: 26%;
+  }
+}
+
+.mrt-skills__item:nth-child(2) {
+  margin-left: auto;
+  @include mrt-breakpoint('desktop-medium') {
+    margin-left: 0;
+  }
+}
+
+.mrt-skills__item:not(:first-child) {
+  margin-top: mrt-px-to-rem(50px);
+  @include mrt-breakpoint('desktop-small') {
+    margin-top: mrt-px-to-rem(60px);
+  }
+  @include mrt-breakpoint('desktop-medium') {
+    margin-top: 0;
+  }
+}
+
+.mrt-skills__item:nth-child(1)::before {
+  @include mrt-breakpoint('desktop-medium') {
+    content: '';
+    display: block;
+    padding-top: 25%;
+  }
+}
+
+.mrt-skills__item:nth-child(2)::before {
+  @include mrt-breakpoint('desktop-medium') {
+    content: '';
+    display: block;
+    padding-top: 80%;
+  }
+}
+
+.mrt-skills-section__cutout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $mrt-color-light;
+  @include mrt-breakpoint(mobile-large) {
+    background: transparent;
+  }
+}
+
+.mrt-skills-section__cutout__container::before {
+  content: '';
+  display: block;
+  background: $mrt-color-light;
+  margin-left: auto;
+  @include mrt-section-spacing('height',1);
+  @include mrt-breakpoint(mobile-large) {
+    width: 44%;
+  }
+  @include mrt-breakpoint(mobile-huge) {
+    width: calc( 29% + ((100 - (29 * 3)) * 0.5) * 1%);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    width: calc( 26% + ((100 - (26 * 3)) * 0.5) * 1%);
+  }
+}
+
+.mrt-skills-section__cutout__container::after {
+  content: '';
+  display: block;
+  background: $mrt-color-light;
+  margin-left: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc( (100vw - 90vw) * 0.5 );
+  z-index: 1;
+  @include mrt-breakpoint(desktop-large) {
+    width: calc( (100vw - 88vw) * 0.5 );
+    min-width: calc( (100% - 2200px) * 0.5 );
+  }
+}

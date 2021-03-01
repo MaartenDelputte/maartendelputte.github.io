@@ -1,0 +1,40 @@
+@each $layout-direction in $mrt-layout-margin-directions {
+  .mrt-layout--margin-#{$layout-direction}-large {
+    margin-#{$layout-direction}: mrt-px-to-rem(60px);
+    @include mrt-breakpoint(mobile-large) {
+      margin-#{$layout-direction}: mrt-px-to-rem(100px);
+    }
+    @include mrt-breakpoint(desktop-large) {
+      margin-#{$layout-direction}: mrt-px-to-rem(120px);
+    }
+    @include mrt-breakpoint(desktop-huge) {
+      margin-#{$layout-direction}: mrt-px-to-rem(140px);
+    }
+  }
+
+  .mrt-layout--margin-#{$layout-direction}-small {
+    margin-#{$layout-direction}: mrt-px-to-rem(20px);
+    @include mrt-breakpoint(mobile-large) {
+      margin-#{$layout-direction}: mrt-px-to-rem(30px);
+    }
+    @include mrt-breakpoint(desktop-large) {
+      margin-#{$layout-direction}: mrt-px-to-rem(40px);
+    }
+    @include mrt-breakpoint(desktop-huge) {
+      margin-#{$layout-direction}: mrt-px-to-rem(50px);
+    }
+  }
+
+  .mrt-layout--margin-#{$layout-direction}-tiny {
+    margin-#{$layout-direction}: mrt-px-to-rem(10px);
+    @include mrt-breakpoint(mobile-large) {
+      margin-#{$layout-direction}: mrt-px-to-rem(15px);
+    }
+    @include mrt-breakpoint(desktop-large) {
+      margin-#{$layout-direction}: mrt-px-to-rem(20px);
+    }
+    @include mrt-breakpoint(desktop-huge) {
+      margin-#{$layout-direction}: mrt-px-to-rem(30px);
+    }
+  }
+}

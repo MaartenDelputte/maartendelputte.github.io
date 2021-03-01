@@ -1,0 +1,32 @@
+.mrt-hover-effect--underline {
+  position: relative;
+}
+
+.mrt-hover-effect--underline::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: - mrt-px-to-rem(4px);
+  left: 50%;
+  transform: translate(-50%,0);
+  height: mrt-px-to-rem(2px);
+  width: 0%;
+  transition: 0.3s width;
+}
+
+.mrt-hover-effect--underline--size-large::after {
+  height: mrt-px-to-rem(6px);
+  bottom: - mrt-px-to-rem(6px);
+}
+
+.mrt-hover-effect--underline:hover::after {
+  width: 100%;
+}
+
+.mrt-hover-effect--underline--bg-light::after {
+  background: $mrt-color-light;
+}
+
+.mrt-hover-effect--underline--bg-dark::after {
+  background: $mrt-color-dark;
+}

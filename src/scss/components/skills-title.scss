@@ -1,0 +1,8 @@
+.mrt-skills-title {
+  @include mrt-breakpoint('desktop-medium') {
+    margin-right: calc((100% / 3) - #{mrt-px-to-rem(60px)});
+  }
+  @include mrt-breakpoint('desktop-large') {
+    margin-right: calc((100% / 3) - #{mrt-px-to-rem(100px)});
+  }
+}

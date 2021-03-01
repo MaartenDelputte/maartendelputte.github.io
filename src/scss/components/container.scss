@@ -1,0 +1,19 @@
+.mrt-container {
+  margin: 0 auto;
+  max-width: 90%;
+  @include mrt-breakpoint(desktop-large) {
+    width: 88%;
+    max-width: 2200px;
+  }
+}
+
+.mrt-container-small {
+  margin: 0 auto;
+  max-width: 100%;
+  @include mrt-breakpoint(desktop-medium) {
+    max-width: 90%;
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,81 @@
+.mrt-intro {
+  padding-top: mrt-px-to-rem(48px);
+  @include mrt-breakpoint(mobile-medium) {
+    padding-top: mrt-px-to-rem(70px);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    padding-top: mrt-px-to-rem(100px);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    padding-top: mrt-px-to-rem(120px);
+    overflow: hidden;
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    padding-top: mrt-px-to-rem(140px);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    padding-top: mrt-px-to-rem(170px);
+  }
+}
+
+.mrt-intro .mrt-container {
+  @include mrt-breakpoint(mobile-large) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.mrt-intro__text {
+  width: 100%;
+  @include mrt-breakpoint(mobile-large) {
+    margin-top: mrt-px-to-rem(50px);
+    width: 90%;
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    width: 92%;
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    width: 80%;
+  }
+}
+
+.mrt-intro__text__title {
+  position: relative;
+}
+
+.mrt-intro__text__title__animated {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media (pointer: coarse) {
+    display: none;
+  }
+}
+
+.mrt-intro__info {
+  display: flex;
+  align-items: center;
+  margin-top: mrt-px-to-rem(50px);
+  @include mrt-breakpoint(mobile-large) {
+    margin-top: 0;
+  }
+}
+
+.mrt-intro__info__links {
+  flex: 1;
+  @include mrt-breakpoint(mobile-large) {
+    display: none;
+  }
+}
+
+.mrt-intro__info__links__item:not(:first-child) {
+  margin-top: mrt-px-to-rem(8px);
+}
+
+.mrt-intro__info__graduated {
+  margin-right: mrt-px-to-rem(50px);
+  @include mrt-breakpoint(mobile-large) {
+    margin-left: auto;
+    margin-right: mrt-px-to-rem(40px);
+  }
+}

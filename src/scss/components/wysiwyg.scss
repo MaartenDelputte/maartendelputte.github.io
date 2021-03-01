@@ -1,0 +1,24 @@
+.mrt-wysiwyg p:not(:first-child) {
+  margin-top: mrt-px-to-rem(26px);
+  @include mrt-breakpoint(mobile-small) {
+    margin-top: mrt-px-to-rem(28px);
+  }
+  @include mrt-breakpoint(mobile-medium) {
+    margin-top: mrt-px-to-rem(30px);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    margin-top: mrt-px-to-rem(32px);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    margin-top: mrt-px-to-rem(36px);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    margin-top: mrt-px-to-rem(40px);
+  }
+  @include mrt-breakpoint(desktop-large) {
+    margin-top: mrt-px-to-rem(46px);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    margin-top: mrt-px-to-rem(48px);
+  }
+}

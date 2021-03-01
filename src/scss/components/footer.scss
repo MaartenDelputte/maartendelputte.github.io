@@ -1,0 +1,8 @@
+.mrt-footer {
+  @include mrt-breakpoint(mobile-huge) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

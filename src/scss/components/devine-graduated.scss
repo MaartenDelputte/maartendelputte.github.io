@@ -1,0 +1,85 @@
+.mrt-devine-graduated {
+  display: inline-block;
+  position: relative;
+  animation: scaleIn 0.7s ease-in forwards;
+}
+
+.mrt-devine-graduated__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: fullRotation 6s infinite linear;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Put each letter by default in the middle of the object, use the height to expand it from the middle out outside the object */
+.mrt-devine-graduated__text__letter {
+  height: 260%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: mrt-px-to-rem(12px);
+  line-height: 0;
+  color: $mrt-color-dark;
+  @include mrt-breakpoint(mobile-large) {
+    height: 240%;
+  }
+}
+
+/* rotate each letter so that everything is inside a circle */
+/* first word */
+@for $i from 1 through 9 {
+  .mrt-devine-graduated__text__letter:nth-child(#{$i}) {
+    transform: translate(-50%,-50%) rotate(($i*15)+deg);
+  }
+}
+/* second word, 1.6 creates margin */
+$mrt-devine-graduated-line-offset: 1.6;
+@for $i from 10 through 15 {
+  .mrt-devine-graduated__text__letter:nth-child(#{$i}) {
+    transform: translate(-50%,-50%) rotate((($i+$mrt-devine-graduated-line-offset)*15)+deg);
+  }
+}
+/* third word, 3.2 creates margin */
+@for $i from 16 through 19 {
+  .mrt-devine-graduated__text__letter:nth-child(#{$i}) {
+    transform: translate(-50%,-50%) rotate((($i+($mrt-devine-graduated-line-offset*2))*15)+deg);
+  }
+}
+
+.mrt-devine-graduated__icon {
+  width: mrt-px-to-rem(36px);
+  height: mrt-px-to-rem(36px);
+  @include mrt-breakpoint(mobile-small-s) {
+    width: mrt-px-to-rem(40px);
+    height: mrt-px-to-rem(40px);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    width: mrt-px-to-rem(46px);
+    height: mrt-px-to-rem(46px);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    width: mrt-px-to-rem(50px);
+    height: mrt-px-to-rem(50px);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    width: mrt-px-to-rem(60px);
+    height: mrt-px-to-rem(60px);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    width: mrt-px-to-rem(70px);
+    height: mrt-px-to-rem(70px);
+  }
+}
+
+.mrt-devine-graduated svg {
+  display: block;
+  fill: $mrt-color-dark;
+  width: 100%;
+  height: 100%;
+}

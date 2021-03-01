@@ -1,0 +1,29 @@
+.mrt-animate--fade-in-bottom {
+  opacity: 0;
+  transform: translate(0,10%);
+  transition: all 1s;
+  @media (pointer: coarse) {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.mrt-animate--fade-in-bottom.mrt-animate--in-viewport {
+  opacity: 1;
+  transform: translate(0,0%);
+}
+
+.mrt-animate--fade-in-right {
+  opacity: 0;
+  transform: translate(5%,0%);
+  transition: all 1s;
+  @media (pointer: coarse) {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.mrt-animate--fade-in-right.mrt-animate--in-viewport {
+  opacity: 1;
+  transform: translate(0,0%);
+}

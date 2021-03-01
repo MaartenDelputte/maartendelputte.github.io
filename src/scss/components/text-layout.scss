@@ -1,0 +1,34 @@
+.mrt-text-layout {
+  @include mrt-breakpoint(desktop-medium) {
+    display: flex;
+  }
+}
+
+.mrt-text-layout__title {
+  margin-bottom: mrt-px-to-rem(28px);
+  @include mrt-breakpoint(mobile-small) {
+    margin-bottom: mrt-px-to-rem(30px);
+  }
+  @include mrt-breakpoint(mobile-medium) {
+    margin-bottom: mrt-px-to-rem(32px);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    margin-bottom: mrt-px-to-rem(34px);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    margin-bottom: mrt-px-to-rem(36px);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    margin-bottom: 0;
+    width: 24%;
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    width: 30%;
+  }
+}
+
+.mrt-text-layout__content {
+  @include mrt-breakpoint(desktop-medium) {
+    flex: 1;
+  }
+}

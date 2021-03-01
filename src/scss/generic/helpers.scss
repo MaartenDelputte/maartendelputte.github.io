@@ -1,0 +1,229 @@
+/* theme */
+.mrt-bg--color-dark {
+  background: $mrt-color-dark;
+  color: $mrt-color-light;
+}
+
+.mrt-bg--color-light {
+  background: $mrt-color-light;
+}
+
+.mrt-text--color-gray {
+  color: $mrt-color-light-gray;
+}
+
+.mrt-text--color-dark-gray {
+  color: $mrt-color-gray;
+}
+
+.mrt-text--color-spotify {
+  color: $mrt-color-spotify;
+}
+
+.mrt-text--align-center {
+  text-align: center;
+}
+
+.mrt-text--align-right {
+  text-align: right;
+}
+
+/* typography */
+/* heading/titles */
+
+.mrt-heading--size-huge {
+  font-size: mrt-px-to-rem(32px);
+  line-height: mrt-px-to-rem(32px*$mrt-line-height-huge);
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(38px);
+    line-height: mrt-px-to-rem(38px*$mrt-line-height-huge);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    font-size: mrt-px-to-rem(50px);
+    line-height: mrt-px-to-rem(50px*$mrt-line-height-huge);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(60px);
+    line-height: mrt-px-to-rem(60px*$mrt-line-height-huge);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    font-size: mrt-px-to-rem(76px);
+    line-height: mrt-px-to-rem(76px*$mrt-line-height-huge);
+  }
+  @include mrt-breakpoint(desktop-large) {
+    font-size: mrt-px-to-rem(86px);
+    line-height: mrt-px-to-rem(86px*$mrt-line-height-huge);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    font-size: mrt-px-to-rem(90px);
+    line-height: mrt-px-to-rem(90px*$mrt-line-height-huge);
+  }
+}
+
+.mrt-heading--size-large {
+  font-size: mrt-px-to-rem(28px);
+  line-height: mrt-px-to-rem(24px*$mrt-line-height-large);
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(34px);
+    line-height: mrt-px-to-rem(30px*$mrt-line-height-large);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    font-size: mrt-px-to-rem(44px);
+    line-height: mrt-px-to-rem(40px*$mrt-line-height-large);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(50px);
+    line-height: mrt-px-to-rem(46px*$mrt-line-height-large);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    font-size: mrt-px-to-rem(60px);
+    line-height: mrt-px-to-rem(56px*$mrt-line-height-large);
+  }
+  @include mrt-breakpoint(desktop-large) {
+    font-size: mrt-px-to-rem(66px);
+    line-height: mrt-px-to-rem(62px*$mrt-line-height-large);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    font-size: mrt-px-to-rem(70px);
+    line-height: mrt-px-to-rem(64px*$mrt-line-height-large);
+  }
+}
+
+.mrt-heading--size-medium {
+  font-size: mrt-px-to-rem(22px);
+  line-height: mrt-px-to-rem(26px);
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(26px);
+    line-height: mrt-px-to-rem(22px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(28px);
+    line-height: mrt-px-to-rem(24px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    font-size: mrt-px-to-rem(30px);
+    line-height: mrt-px-to-rem(26px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    font-size: mrt-px-to-rem(34px);
+    line-height: mrt-px-to-rem(30px*$mrt-line-height-default);
+  }
+}
+
+.mrt-heading--size-small {
+  font-size: mrt-px-to-rem(18px);
+  line-height: mrt-px-to-rem(14px*$mrt-line-height-default);
+  @include mrt-breakpoint(mobile-small) {
+    font-size: mrt-px-to-rem(20px);
+    line-height: mrt-px-to-rem(16px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(24px);
+    line-height: mrt-px-to-rem(20px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(26px);
+    line-height: mrt-px-to-rem(22px*$mrt-line-height-default);
+  }
+}
+
+/* Text */
+
+.mrt-text--size-huge {
+  font-size: mrt-px-to-rem(40px);
+  line-height: mrt-px-to-rem(40px);
+  @include mrt-breakpoint(mobile-small) {
+    font-size: mrt-px-to-rem(56px);
+    line-height: mrt-px-to-rem(56px);
+  }
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(60px);
+    line-height: mrt-px-to-rem(60px);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    font-size: mrt-px-to-rem(80px);
+    line-height: mrt-px-to-rem(80px);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(100px);
+    line-height: mrt-px-to-rem(100px);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    font-size: mrt-px-to-rem(120px);
+    line-height: mrt-px-to-rem(120px);
+  }
+}
+
+.mrt-text--size-large {
+  font-size: mrt-px-to-rem(17px);
+  line-height: mrt-px-to-rem(17px*$mrt-line-height-default);
+  @include mrt-breakpoint(mobile-small) {
+    font-size: mrt-px-to-rem(18px);
+    line-height: mrt-px-to-rem(18px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(22px);
+    line-height: mrt-px-to-rem(22px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(mobile-large) {
+    font-size: mrt-px-to-rem(26px);
+    line-height: mrt-px-to-rem(26px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(30px);
+    line-height: mrt-px-to-rem(30px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    font-size: mrt-px-to-rem(32px);
+    line-height: mrt-px-to-rem(32px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-large) {
+    font-size: mrt-px-to-rem(34px);
+    line-height: mrt-px-to-rem(34px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    font-size: mrt-px-to-rem(38px);
+    line-height: mrt-px-to-rem(38px*$mrt-line-height-default);
+  }
+}
+
+.mrt-text--size-medium {
+  font-size: mrt-px-to-rem(17px);
+  line-height: mrt-px-to-rem(17px*$mrt-line-height-default);
+  @include mrt-breakpoint(mobile-small) {
+    font-size: mrt-px-to-rem(18px);
+    line-height: mrt-px-to-rem(18px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(mobile-medium) {
+    font-size: mrt-px-to-rem(22px);
+    line-height: mrt-px-to-rem(22px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-small) {
+    font-size: mrt-px-to-rem(24px);
+    line-height: mrt-px-to-rem(24px*$mrt-line-height-default);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    font-size: mrt-px-to-rem(28px);
+    line-height: mrt-px-to-rem(28px*$mrt-line-height-default);
+  }
+}
+
+/* weights */
+.mrt-font-weight--default {
+  font-weight: 400;
+}
+
+.mrt-font-weight--bold {
+  font-weight: 500;
+}
+
+/* shapes */
+.mrt-full-border-radius {
+  border-radius: 100%;
+}
+
+/* overflow */
+.mrt-overflow-full {
+  width: 100%;
+  overflow: hidden;
+}

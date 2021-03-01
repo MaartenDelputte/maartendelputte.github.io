@@ -1,0 +1,33 @@
+/* credit: https://davidhellmann.com/blog/development/sass-breakpoint-mixin */
+@mixin mrt-breakpoint($breakpoint) {
+  @if map-has-key($mrt-breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($mrt-breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else if unitless($breakpoint) {
+    $breakpoint: $breakpoint + 0px;
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin mrt-section-spacing($modifier,$multiplier: 1, $additional : null) {
+  #{$modifier}: mrt-px-to-rem(70px * $multiplier) $additional;
+  @include mrt-breakpoint(mobile-medium) {
+    #{$modifier}: mrt-px-to-rem(100px * $multiplier) $additional;
+  }
+  @include mrt-breakpoint(mobile-large) {
+    #{$modifier}: mrt-px-to-rem(120px * $multiplier) $additional;
+  }
+  @include mrt-breakpoint(desktop-small) {
+    #{$modifier}: mrt-px-to-rem(140px * $multiplier) $additional;
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    #{$modifier}: mrt-px-to-rem(180px * $multiplier) $additional;
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    #{$modifier}: mrt-px-to-rem(200px * $multiplier) $additional;
+  }
+}

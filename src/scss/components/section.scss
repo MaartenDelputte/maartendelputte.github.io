@@ -1,0 +1,14 @@
+.mrt-section {
+  position: relative;
+  @include mrt-section-spacing('padding',1,0);
+}
+
+.mrt-section--padding-double-top {
+  @include mrt-section-spacing('padding-top',2);
+}
+
+@each $layout-direction in $mrt-layout-margin-directions {
+  .mrt-section--padding-#{$layout-direction}-none {
+    padding-#{$layout-direction}: 0;
+  }
+}

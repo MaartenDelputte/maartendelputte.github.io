@@ -1,0 +1,7 @@
+.mrt-main {
+  @include mrt-breakpoint(mobile-huge) {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 100vh;
+  }
+}

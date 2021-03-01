@@ -1,0 +1,51 @@
+.mrt-music {
+  @include mrt-breakpoint(mobile-huge) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.mrt-music__item {
+  width: 60%;
+  @include mrt-breakpoint(mobile-large) {
+    width: 44%;
+  }
+  @include mrt-breakpoint(mobile-huge) {
+    width: 29%;
+  }
+  @include mrt-breakpoint(desktop-medium) {
+    width: 26%;
+  }
+}
+
+.mrt-music__item:not(:first-child) {
+  margin-top: mrt-px-to-rem(40px);
+  @include mrt-breakpoint(mobile-large) {
+    margin-top: mrt-px-to-rem(-90px);
+  }
+  @include mrt-breakpoint(mobile-huge) {
+    margin-top: 0;
+  }
+}
+
+.mrt-music__item:nth-child(even) {
+  margin-left: auto;
+  @include mrt-breakpoint(mobile-huge) {
+    margin-left: 0;
+  }
+}
+
+.mrt-music__item:not(:first-child)::before {
+  @include mrt-breakpoint(mobile-huge) {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 50%;
+  }
+}
+
+.mrt-music__item:last-child::before {
+  @include mrt-breakpoint(mobile-huge) {
+    padding-bottom: 100%;
+  }
+}

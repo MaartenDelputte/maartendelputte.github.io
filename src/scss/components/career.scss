@@ -1,0 +1,42 @@
+.mrt-career__item {
+  text-align: center;
+  @include mrt-breakpoint(desktop-small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mrt-career__item:not(:first-child) {
+  margin-top: mrt-px-to-rem(50px);
+  @include mrt-breakpoint(desktop-small) {
+    margin-top: mrt-px-to-rem(70px);
+  }
+  @include mrt-breakpoint(desktop-large) {
+    margin-top: mrt-px-to-rem(76px);
+  }
+  @include mrt-breakpoint(desktop-huge) {
+    margin-top: mrt-px-to-rem(86px);
+  }
+}
+
+.mrt-career__item__info {
+  @include mrt-breakpoint(mobile-large) {
+    display: flex;
+    justify-content: center;
+  }
+  @include mrt-breakpoint(desktop-small) {
+    justify-content: start;
+  }
+}
+
+.mrt-career__item__info__place::after {
+  @include mrt-breakpoint(mobile-large) {
+    content: '/';
+    padding: 0 mrt-px-to-rem(15px);
+    color: $mrt-color-light-gray;
+  }
+  @include mrt-breakpoint(desktop-small) {
+    padding: 0 mrt-px-to-rem(20px);
+  }
+}
